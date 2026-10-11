@@ -1,7 +1,20 @@
 #include <stdio.h>
 #include <math.h>
-
+/
+ * @brief вычисляет значение функции по заданной формуле
+ * @param x - значение переменной х
+ * @param y - значение переменной y
+ * @param z - значение переменной z
+ * @return рассчитанное значение
+ */
 double A(const double x, const double y, const double z);
+/
+ * @brief вычисляет значение функции по заданной формуле
+ * @param x - значение переменной х
+ * @param y - значение переменной y
+ * @param z - значение переменной z
+ * @return рассчитанное значение
+ */
 double B(const double x, const double y, const double z);
 
 /**
