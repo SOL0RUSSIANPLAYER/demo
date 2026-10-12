@@ -17,10 +17,10 @@ double s(const double side);
  */
 int main()
 {
-    double U, u, t, s;
+    double v, u, t, s;
 
     printf("Введите скорость лодки в стоячем положении: ");
-    scanf("%lf", &U);
+    scanf("%lf", &v);
     printf("Введите скорость течение реки: ");
     scanf("%lf", &u);
     printf("Введите время движения: ");
