@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 /**
- * @brief Вычисляет площать квадрата с заданной стороной
- * @param side сторона квадрата
+ * @brief Вычисляет пройденный путь по течению с за данными числами 
+ * @param side пройденное расстояние 
  * @return Рассчитанное значение
  */
 double s(const double side);
