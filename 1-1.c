@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 double A(const double x, const double y, const double z);
 double B(const double x, const double y, const double z);
