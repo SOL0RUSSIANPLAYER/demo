@@ -16,16 +16,16 @@ double s(const double side);
  */
 int main()
 {
-    double v, u, t, s;
+    double v1, v2, t, s;
 
     printf("Введите скорость лодки в стоячем положении: ");
-    scanf("%lf", &v);
+    scanf("%lf", &v1);
     printf("Введите скорость течение реки: ");
-    scanf("%lf", &u);
+    scanf("%lf", &v2);
     printf("Введите время движения: ");
     scanf("%lf", &t);
 
-    s = (U + u) * t;
+    s = (v1 + v2) * t;
 
     printf(" S = %f\n", s);
 
