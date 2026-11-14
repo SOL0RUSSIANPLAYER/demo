@@ -16,16 +16,7 @@ double getDouble();
  * @param y2 координата Y второй вершины
  * @return Длина отрезка между вершинами
  */
-double getSide(const double x1, const double y1, const double x2, const double y2);
-
-/**
- * @brief Проверяет, могут ли заданные стороны образовать невырожденный треугольник
- * @param a длина первой стороны
- * @param b длина второй стороны
- * @param c длина третьей стороны
- */
-void checkTriangle(const double a, const double b, const double c);
-
+double Side(const double x1, const double y1, const double x2, const double y2);
 /**
  * @brief Вычисляет периметр треугольника
  * @param a длина первой стороны
@@ -65,12 +56,9 @@ int main()
     printf("Enter y3: ");
     const double y3 = getDouble();
 
-    const double a = getSide(x1, y1, x2, y2);
-    const double b = getSide(x2, y2, x3, y3);
-    const double c = getSide(x1, y1, x3, y3);
-
-    checkTriangle(a, b, c);
-
+    const double a = Side(x1, y1, x2, y2);
+    const double b = Side(x2, y2, x3, y3);
+    const double c = Side(x1, y1, x3, y3);
     printf("Периметр = %lf\n", P(a, b, c));
     printf("Площадь = %lf\n", S(a, b, c));
 
@@ -88,21 +76,10 @@ double getDouble()
     return value;
 }
 
-double getSide(const double x1, const double y1, const double x2, const double y2)
+double Side(const double x1, const double y1, const double x2, const double y2)
 {
     return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 }
-
-void checkTriangle(const double a, const double b, const double c)
-{
-    const double eps = 1e-9;
-    if (a + b <= c + eps || a + c <= b + eps || b + c <= a + eps)
-    {
-        printf("Error");
-        exit(1);
-    }
-}
-
 double P(const double a, const double b, const double c)
 {
     return a + b + c;
