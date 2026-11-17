@@ -81,9 +81,9 @@ bool Circle(const double w, const double h, const double r)
 
 bool Cut(const double r, const double a, const double b, const double c, const double d)
 {
-    return Circle(a + c, Max(b, d), r) ||
-           Circle(a + d, Max(b, c), r) ||
-           Circle(b + c, Max(a, d), r) ||
+    return Circle(a + c, Max(b, d), r) 
+           Circle(a + d, Max(b, c), r) 
+           Circle(b + c, Max(a, d), r) 
            Circle(b + d, Max(a, c), r);
 }
 
