@@ -90,6 +90,10 @@ bool Cut(const double r, const double a, const double b, const double c, const d
 double getDouble()
 {
     double value = 0.0;
-    scanf("%lf", &value);
+    if (scanf("%lf",&value)!=1)
+    {
+        printf("Error");
+        exit(1);
+    }
     return value;
 }
