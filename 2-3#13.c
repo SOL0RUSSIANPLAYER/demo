@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
+#include <stdlib.h>
 
 /**
  * @brief Находит максимальное из двух чисел с плавающей точкой
@@ -56,7 +57,11 @@ int main()
 
     printf("введите ширину второй пластинки: ");
     const double d = getDouble();
-
+    if (r <= 0, a <= 0, b <= 0, c <= 0,d <= 0)
+    {
+        printf("Ошибка, так как одно или несколько из чисел отрицательное.\n");
+        return 1;
+    }
     if (Cut(r, a, b, c, d))
     {
         printf("Да можно резать пластинки.\n");
@@ -65,7 +70,6 @@ int main()
     {
         printf("Нет, это невозможно.\n");
     }
-
     return 0;
 }
 
@@ -81,15 +85,19 @@ bool Circle(const double w, const double h, const double r)
 
 bool Cut(const double r, const double a, const double b, const double c, const double d)
 {
-    return Circle(a + c, Max(b, d), r); 
-           Circle(a + d, Max(b, c), r); 
-           Circle(b + c, Max(a, d), r); 
+    return Circle(a + c, Max(b, d), r);
+           Circle(a + d, Max(b, c), r);
+           Circle(b + c, Max(a, d), r);
            Circle(b + d, Max(a, c), r);
 }
 
 double getDouble()
 {
     double value = 0.0;
-    scanf("%lf", &value);
+    if (scanf("%lf",&value)!=1)
+    {
+        printf("Error");
+        exit(1);
+    }
     return value;
 }
